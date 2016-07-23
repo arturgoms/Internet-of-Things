@@ -1,42 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:orientation="vertical"
-    tools:context="up.curso_iot_part_2.MainActivity">
+    tools:context="up.interface_casa.MainActivity"
+    android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/activity_main_ip_txt"
-        android:text="Seu Otário!"
-        android:layout_width="wrap_content"
+    <RadioGroup
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"/>
-    <LinearLayout
-        android:layout_margin="10dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:orientation="horizontal">
+        android:layout_centerInParent="true"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:id="@+id/main_activity_radio_group">
 
-        <Button
-            android:id="@+id/activity_main_server_btn"
-            android:layout_marginRight="5dp"
-            android:text="Server"
+        <RadioButton
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-        <Button
-            android:id="@+id/activity_main_client_btn"
-            android:layout_marginLeft="5dp"
-            android:text="Client"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:text="Casa 1"
+            android:checked="true"
+            android:id="@+id/main_activity_casa_1_btn"/>
+
+        <RadioButton
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-    </LinearLayout>
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:gravity="center"
+            android:text="Casa 2"
+            android:id="@+id/main_activity_casa_2_btn"/>
+    </RadioGroup>
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -44,16 +41,16 @@
         android:layout_marginTop="10dp">
 
         <EditText
-            android:id="@+id/activity_main_edit_txt"
+            android:id="@+id/activity_main_send_txt"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
-            android:layout_toLeftOf="@+id/activity_main_ok_btn"/>
+            android:layout_toLeftOf="@+id/activity_main_send_btn"/>
         <Button
-            android:text="Ok!"
+            android:text="Enviar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/activity_main_ok_btn"
+            android:id="@+id/activity_main_send_btn"
             android:layout_alignParentRight="true"/>
     </RelativeLayout>
 
@@ -62,6 +59,5 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/activity_main_data_txt"/>
-
 
 </LinearLayout>

@@ -1,4 +1,4 @@
-package up.curso_iot_part_2;
+package up.interface_casa;
 
 import org.junit.Test;
 
